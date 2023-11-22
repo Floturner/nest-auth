@@ -3,9 +3,8 @@ import { ConfigModule, ConfigType } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import * as createRedisStore from 'connect-redis';
 import * as session from 'express-session';
-import { Redis } from 'ioredis';
+import Redis from 'ioredis';
 import * as passport from 'passport';
 import googleConfig from 'src/config/google.config';
 import jwtConfig from 'src/config/jwt.config';
@@ -34,6 +33,8 @@ import { FrameworkContributorPolicyHandler } from './authorization/policies/fram
 import { PolicyHandlerStorage } from './authorization/policies/policy-handlers.storage';
 import { BcryptService } from './hashing/bcrypt.service';
 import { HashingService } from './hashing/hashing.service';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const RedisStore = require('connect-redis').default;
 
 @Module({
   imports: [
@@ -93,7 +94,6 @@ export class IamModule implements NestModule {
   ) {}
 
   configure(consumer: MiddlewareConsumer) {
-    const RedisStore = createRedisStore(session);
     consumer
       .apply(
         session({
