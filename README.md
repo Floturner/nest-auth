@@ -12,19 +12,16 @@ This app showcases real-world Authentication and Authorization techniques with N
 8. Google authentication
 9. Sessions with Passport
 
-## Installation
+## Get started
+
+1. Make sure you have docker installed on your local machine.
+2. Duplicate the `.env.example` file and rename it to `.env`. Fill in the required variables.
 
 ```bash
 # Install dependencies
 $ npm install
-```
 
-## Setup databases
-
-Make sure you have docker installed on your local machine.
-
-```bash
-# setup postgres and redis with docker
+# setup postgres database with docker
 $ docker compose up
 ```
 
