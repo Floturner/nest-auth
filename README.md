@@ -21,7 +21,7 @@ This app showcases real-world Authentication and Authorization techniques with N
 # Install dependencies
 $ npm install
 
-# setup postgres database with docker
+# setup postgres and redis database with docker
 $ docker compose up
 ```
 
