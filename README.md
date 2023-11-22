@@ -1,5 +1,17 @@
 # Nest Auth
 
+This app showcases real-world Authentication and Authorization techniques with NestJS from access to refresh tokens, and everything in between:
+
+1. JWT-based authentication (refresh tokens, invalidating tokens)
+2. Role-based Access Control
+3. Claims-based Authorization
+4. Policy-based Authorization
+5. Integrate API Keys feature
+6. Implement server-side sessions
+7. Two-factor (2FA) authentication
+8. Google authentication
+9. Sessions with Passport
+
 ## Installation
 
 ```bash
