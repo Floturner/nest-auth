@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: adminer1234
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - '6379:6379'
