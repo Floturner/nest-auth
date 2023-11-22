@@ -8,7 +8,7 @@ services:
     ports:
       - '5432:5432'
     environment:
-      POSTGRES_PASSWORD: adminer1234
+      POSTGRES_PASSWORD: password1234
 
   redis:
     image: redis
